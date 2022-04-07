@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Alien Abduction Order Form</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+	<link href="css/forms.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		<section>
+				<h1>Alien Abduction Order Form</h1>
+				<p>Fill out the form below to place an order for an alien abduction by one of our fine UFOs.</p>
+				<form method="POST" action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SES">
+			<!--This is the destination we are sending the information to-->
+				<fieldset>	
+					<legend>Your contact information</legend>
+					<label for="name">Your name</label> <!--The for in label is always associated withe the id inside input-->
+					<input type="text" id="name" name="name" placeholder="Enter Your Name Here"> 
+					<!--The name is related to backend processing -->
+					<label for="phone">Phone number</label>
+					<input type="tel" id="phone" name="phone"> 
+					<!--Tel is for telephone-->
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" required>
+					<!-- TRY TO NOT WRITE CAPITAL LETTERS IN (NAME,ID,FOR,VALUE) & USE LOWERCASE IN GENERAL TO AVOID ERRORS -->
+				</fieldset>
+
+				<fieldset>
+					<legend>About your abduction </legend>
+
+					<label for="date">Requested  date</label>
+						<input type="date" id="date" name="date"	>
+
+					<label for="qty">How many people would you like abducted?</label>
+						<input type="number" id="qty" name="qty" min="5" max="15">
+
+					<p>What type of UFO do you prefer?</p>
+						<label>
+							<input type="radio" name="ufotype"  value="Classic">Classic oval UFO
+						</label>
+
+						<label>
+							<input type="radio" name="ufotype" value="Imperial cruiser">  Star Wars-style Imperial cruiser
+						</label>
+
+						<label>
+							<input type="radio" name="ufotype" value="Viper" >Battlestar Galactica-style Viper
+						</label>
+
+						<label>
+							<input type="radio" name="ufotype" value="Borg"> Borg-style cube
+						</label>
+						<label>
+							<input type="radio" name="ufotype" value="any"> Whatever is in the neighborhood
+						</label>
+						
+					<label for="abtype">What type of abduction experience do you want?</label>
+						<select id="abtype" name="abtype">
+							<option selected>Select an option </option>
+							<option value="Tour">Tour of the solar system</option>
+							<option value="Dinner">Alien dinner and discussion</option>
+							<option value="Dance">Alien dance lessons</option>
+							<option value="Whale">Whale watching</option>
+						</select>
+
+					<label for="comments">Special requests:</label>
+						<textarea name="comments" id="comments"	></textarea>
+
+					<label>
+						<input type="checkbox" name="subscribe" value="subscribe"  id="subscribe" checked>Add me to the email list <!--when we have the label around the input we don't need an id and for -->
+					</label>
+
+					<input type="hidden" name="send_to" value="mhmd.demerdash@gmail.com">
+					
+				</fieldset>
+				<button type="submit">Submit</button>
+			</form>
+		</section>
+		<aside>
+			<h3>Our Location</h3>
+			<address>
+				Frontend Masters &middot;
+				60 South 6th Street &middot;
+				Suite 3625 &middot;
+				Minneapolis, MN 55402
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3223.6518275046915!2d35.371109461736715!3d33.55462021533658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ef0395ad82679%3A0x2d4c3c9c4f7a71e1!2z2YXYsdmD2LIg2YTYqNmK2Kgg2KfZhNi32KjZig!5e1!3m2!1sen!2slb!4v1649303970470!5m2!1sen!2slb" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</address>
+		</aside>
+	</div>
+
+	<script src="../../../frontend_masters/forms/begin/js/forms.js"></script>
+</body>
+
+</html>
+
+
+
+
+
